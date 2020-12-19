@@ -25,7 +25,7 @@ It's easy, just 2 simple steps!
 
 First, extends your mail classes from `FilippoToso\Mailable\Mailable` instead of `Illuminate\Mail\Mailable`:
 
-```
+```php
 <?php
 
 namespace App\Mail;
@@ -65,7 +65,7 @@ class CustomerPurchase extends Mailable
 Then when you create the mail instance, call the `configure()` method passing your custom mail configuration.
 The supported parameters are exactly the same you would put in the `mail.mailers` configuration (in the `config/mail.php` file). 
 
-```
+```php
 $mail = (new CustomerPurchase)->configure([
     'transport' => 'smtp',
     'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
@@ -82,7 +82,7 @@ Mail::to('filippo@toso.dev')->queue($mail);
 
 You an also do this:
 
-```
+```php
 $mail = new CustomerPurchase();
 
 $mail->configure([
