@@ -101,4 +101,4 @@ Mail::to('filippo@toso.dev')->queue($mail);
 
 That's it! 
 
-If you don't call the configure() method, this Mailable class will behave exactly as the Laravel one ;) 
+If you don't call the `configure()` method, this `Mailable` class will behave exactly as the Laravel one ;) 
