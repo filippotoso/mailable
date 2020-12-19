@@ -80,7 +80,7 @@ $mail = (new CustomerPurchase)->configure([
 Mail::to('filippo@toso.dev')->queue($mail);
 ```
 
-You an also do this:
+You can also do this:
 
 ```php
 $mail = new CustomerPurchase();
