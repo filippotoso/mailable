@@ -68,11 +68,11 @@ The supported parameters are exactly the same you would put in the `mail.mailers
 ```php
 $mail = (new CustomerPurchase)->configure([
     'transport' => 'smtp',
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-    'port' => env('MAIL_PORT', 587),
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-    'username' => env('MAIL_USERNAME'),
-    'password' => env('MAIL_PASSWORD'),
+    'host' => 'smtp.mailgun.org',
+    'port' => 587,
+    'encryption' => 'tls',
+    'username' => 'username',
+    'password' => 'password',
     'timeout' => null,
     'auth_mode' => null,
 ]);
@@ -87,11 +87,11 @@ $mail = new CustomerPurchase();
 
 $mail->configure([
     'transport' => 'smtp',
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-    'port' => env('MAIL_PORT', 587),
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-    'username' => env('MAIL_USERNAME'),
-    'password' => env('MAIL_PASSWORD'),
+    'host' => 'smtp.mailgun.org',
+    'port' => 587,
+    'encryption' => 'tls',
+    'username' => 'username',
+    'password' => 'password',
     'timeout' => null,
     'auth_mode' => null,
 ]);
