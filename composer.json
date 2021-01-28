@@ -1,6 +1,6 @@
 {
     "name": "filippo-toso/mailable",
-    "description": "A Laravel Artisan command to automatically generate models from database tables",
+    "description": "A Laravel configurable Mailable class that also works with queues.",
     "license": "MIT",
     "authors": [
         {
