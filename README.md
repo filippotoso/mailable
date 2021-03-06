@@ -102,3 +102,47 @@ Mail::to('filippo@toso.dev')->queue($mail);
 That's it! 
 
 If you don't call the `configure()` method, this `Mailable` class will behave exactly as the Laravel one ;) 
+
+## Don't want to extend your classes?
+
+If you don't want to (or can't) extend your Mailable classes, just use the `FilippoToso\Mailable\Traits\MailableTrait` trait as follow:
+
+```php
+<?php
+
+namespace App\Mail;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailable;
+use FilippoToso\Mailable\Traits\MailableTrait;
+
+class CustomerPurchase extends Mailable
+{
+    use Queueable, SerializesModels, MailableTrait;
+
+    /**
+     * Create a new message instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Build the message.
+     *
+     * @return $this
+     */
+    public function build()
+    {
+        return $this->view('view.name');
+    }
+}
+
+```
+
+The outcome is the same ;)
