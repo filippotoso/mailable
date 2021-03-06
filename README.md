@@ -17,7 +17,7 @@ composer require filippo-toso/mailable
 ## What it does?
 
 It allows you to send emails using different mailer settings (ie. SMTPs) depending on external factors. 
-This class is very useful when you have a multitenant Laravel application and whant to use a different SMTP account for each of your tenants.  
+This class is very useful when you have a multitenant Laravel application and want to use a different SMTP accounts for each of your tenant.  
 
 ## How does it work?
 
